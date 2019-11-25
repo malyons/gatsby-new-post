@@ -9,7 +9,7 @@ if (!title) throw "a title is required!";
 
 const slug = slugify(title.toLowerCase());
 const date = dateFns.format(new Date(), "yyyy-mm-dd");
-const dir = `./content/blog/${date}-${slug}`;
+const dir = `./content/posts/${date}-${slug}`;
 
 if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { recursive: true }, err => {
@@ -25,6 +25,7 @@ fs.writeFileSync(
 title: ${title}
 slug: ${slug}
 date: ${date}
+keywords: []
 published: false
 ---`,
   err => {
@@ -33,6 +34,3 @@ published: false
     console.log(`${title} was created!`);
   }
 );
-
-console.log(`slug: ${slug}
-date: ${date}`);

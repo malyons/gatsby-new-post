@@ -4,7 +4,7 @@
   "description": "CLI for creating a new Gatsby post",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Marcus Lyons <marcus.a.lyons@gmail.com>",
   "license": "MIT",
